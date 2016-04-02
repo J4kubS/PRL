@@ -2,7 +2,9 @@
 Implementation of Minimum Extraction Sort using [Open MPI](https://www.open-mpi.org/) library.
 
 ## How to run
-`$ ./test.sh <number of values> <number of processors>`
+```
+$ ./test.sh <number of values> <number of processors>
+```
 Program expects number of processors to be provided correctly.
 
 ## Example
