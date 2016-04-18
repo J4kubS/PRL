@@ -3,4 +3,3 @@ Projects for [PRL](https://www.fit.vutbr.cz/study/courses/index.php?id=10935) (P
 
 ## MES
 Implementation of Minimum Extraction Sort using [Open MPI](https://www.open-mpi.org/) library.
-
