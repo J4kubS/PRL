@@ -1,0 +1,42 @@
+participant "Procesor k" as p
+participant "Procesor 2k + 1" as cl
+participant "Procesor 2k + 2" as cr
+participant "Procesor k - 1" as sl
+participant "Procesor k + 1" as sr
+
+alt k je nelistový
+	cl->p:příznak
+	cr->p:příznak
+	
+	alt k není kořen
+		note over p:odešli příznak otci
+		note over p:přijmi příznak od otce
+	end
+	
+	p->cl:nový příznak
+	p->cr:nový příznak
+end
+	
+alt k je kořen
+	note over p:odešli příznak prvnímu listu
+else k je list
+	alt k není poslední list
+		p->sr:příznak
+	end
+	
+	alt k není první list
+		sl->p:příznak
+	else
+		note over p:přijmi příznak od kořene
+	end
+end
+
+alt k je list
+	alt k není první list
+		p->sl:příznak
+	end
+	
+	alt k není poslední list
+		sr->p:příznak
+	end
+end
